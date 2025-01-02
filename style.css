@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cagliostro&family=Concert+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+body{
+    width: 100%;
+    height: 100%;
+}
+header{
+    width: 100%;
+    height: 100%;
+    top: 2em;
+    left: 1em;
+    /* position: fixed; */
+    position: relative;
+}
+#menuButton{
+    /* background-color: #655E53; */
+    background-color: #CEC2B6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* grid-template-rows: 1fr;
+    place-items: center; */
+    width: 4.5em;
+    height: 4.5em;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: -2em;
+    left: -1em;
+}
+#menuButton span{
+    /* color: red; */
+    z-index: 9;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    border-radius: 0.3em;
+    display: block;
+    background-color:  rgb(190, 129, 129);
+    width: 2.4em;
+    height: 0.28em;
+    margin: 0.2em;
+    
+}
+#menuButton span:first-of-type{
+    transform: translateY(-0.4em);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+#menuButton span:last-of-type{
+    transform: translateY(0.4em);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+#menuButton.navOpen span:nth-of-type(2){
+    /* transform: translateY(-0.4em) scaleX(0); */
+    transform: scaleX(0);
+
+    transition: transform 0.3s ease;
+}
+#menuButton.navOpen span:first-of-type{
+    /* transform: rotate(45deg) translateY(0); */
+    transform: rotate(45deg) scalex(1.25) scale(0.7);
+}
+
+#menuButton.navOpen span:last-of-type{
+    /* transform: rotate(-45deg) translateY(0); */
+    transform: rotate(-45deg) scalex(1.25) scale(0.7);
+}
+
+header nav.toonMenu {
+	transform: translateY(0);
+    visibility: visible; /* Maakt het menu zichtbaar */
+	border-radius: 0;
+}
+header nav {
+    width: 6em;
+    height: auto;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-between; */
+	align-items: center;	
+	transform: translateY(-100%);
+    transition: transform 1s ease; /* Zorgt voor een vloeiende overgang */
+	/* transition: 1s; */
+    visibility: hidden; /* Verbergt het menu visueel */
+    /* gap: 4em; */
+	/* Z-index: 1000; */
+	/* background-color: rgb(181, 138, 138); */
+	/* height: 2em; */ 
+    position: absolute;
+    top: 1.1em;
+    left: -1.67em;
+    
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 0.4em;
+    /* position:unset; */
+
+}
+header nav ul li{
+    width: 4em;
+    height: 4em;
+    background-color: rgb(190, 129, 129);
+    border-radius: 50%;
+    /* align-self: center; */
+
+}
+header nav ul li a{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+/* header nav ul li a:hover {
+    background-color:  #CEC2B6;
+    width: 3.5em;
+    height: 1em;
+    border-radius: 50%;
+} */
+.index-Nav svg{
+    width: 3em;
+    height: 3em;
+    color: aliceblue;
+
+}
+
+/* main */
+/* eerste section */
+
+main section:first-of-type{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 9em;
+    /* left: 0; */
+}
+main section:first-of-type h1{
+    color: #4c473f;
+    font-family: "Montserrat", serif;
+    font-size: 2em;
+    align-self: center; 
+    margin-top: 3em;  
+}
+main section:first-of-type span{
+    color: #D1A18C;
+}
+
+main section:first-of-type p {
+    font-family: "Montserrat", serif;
+    align-self: center;
+    font-size: 1.4em;
+    font-weight: bold;
+
+}
+main section:first-of-type img{
+    width: 90%;
+    height:auto;
+    order: -1;
+    align-self: center;
+
+    /* margin-top: 3em; */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1028px) {
+    /* header{
+        width: 5em;
+        height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+    } */
+    header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 8em; /* Breedte van de zijbalk */
+        background-color: #655E53;
+        background-color:  #CEC2B6;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2em 0;
+        /* overflow: hidden; */
+
+
+    }
+
+    header nav {
+        width: 100%; /* Neem de volledige breedte van de zijbalk */
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em; /* Ruimte tussen de items */
+        background-color: transparent;
+        transform: translate(0);
+        transition: none;
+        visibility: visible;
+        top: 20em;
+        /* position: fixed; */
+        overflow: hidden;
+
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column; /* Menu-items in kolom */
+        align-items: center;
+        list-style: none;
+        gap: 1.5em;
+        padding: 0;
+        margin: 0;
+        z-index: 4444;
+    }
+
+    header nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        z-index: 55555;
+        width: 3.5em;
+        height: 3.5em;
+    }
+
+    header nav ul li a {
+        /* color: white; */
+        text-decoration: none;
+        font-size: 1.2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1em 0;
+        z-index: 55555555;
+
+        /* transition: background-color 0.3s ease; */
+    }
+
+    header nav ul li a:hover {
+        background-color: #b6b2bc; /* Hoverkleur */
+        width: 3.5em;
+        height: 1em;
+        border-radius: 50%;
+       
+
+
+    }
+
+    .index-Nav svg {
+        width: 2.5em;
+        height: 2.5em;
+        fill: white;
+        /* align-self: center; */
+    }
+
+    #menuButton {
+        display: none; /* Verberg de menu-knop op desktop */
+    }
+
+}
